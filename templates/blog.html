@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+  <h1 class="title">
+    {{ section.title }}
+  </h1>
+  <div class="highlight mt-2 mb-3"><!-- Add a highlight under the title --></div>
+</header>
+<div class="post-list mt-5">
+  {% for page in section.pages %}
+  <div class="post-item mt-4">
+    <div class="post-date">{{ page.date | date(format="%b %d, %Y") }}</div>
+    <div class="post-title">
+      <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LT9E26GLJX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-LT9E26GLJX');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <meta name="author" content="{{ config.extra.author }}">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ get_url(path="favicons/apple-touch-icon-57x57.png") }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ get_url(path="favicons/apple-touch-icon-114x114.png") }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ get_url(path="favicons/apple-touch-icon-72x72.png") }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ get_url(path="favicons/apple-touch-icon-144x144.png") }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ get_url(path="favicons/apple-touch-icon-60x60.png") }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ get_url(path="favicons/apple-touch-icon-120x120.png") }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ get_url(path="favicons/apple-touch-icon-76x76.png") }}" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ get_url(path="favicons/apple-touch-icon-152x152.png") }}" />
+  <link rel="icon" type="image/png" href="{{ get_url(path="favicons/favicon-196x196.png") }}" sizes="196x196" />
+  <link rel="icon" type="image/png" href="{{ get_url(path="favicons/favicon-96x96.png") }}" sizes="96x96" />
+  <link rel="icon" type="image/png" href="{{ get_url(path="favicons/favicon-32x32.png") }}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ get_url(path="favicons/favicon-16x16.png") }}" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ get_url(path="favicons/favicon-128.png") }}" sizes="128x128" />
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+
+
+  <link rel="stylesheet" href="{{ get_url(path="css/fonts.css") }}" />
+  <link rel="stylesheet" href="{{ get_url(path="css/bootstrap.min.css") }}" />
+  <link rel="stylesheet" href="{{ get_url(path="site.css") }}" />
+</head>
+
+
+<body>
+  <header>
+    <nav class="main-navbar navbar navbar-expand-md navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img alt="{{ config.title }} logo" src="{{ get_url(path="images/logo.svg") }}">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="navbar-collapse collapse" id="navbarCollapse">
+          <span class="navbar-nav me-auto"><!-- Hidden span to push elements elements in the nav list to the left --></span>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="container mt-5 mx-auto">
+      {% block content %} {% endblock %}
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="container pt-5 pb-5 mx-auto">
+      <div class="row">
+        <div class="col-6 col-md">
+          <h4>{{ config.title }}</h4>
+          <p>Adrián Gallego Castellanos</p>
+        </div>
+        <div class="col-6 col-md">
+          <h4>Social</h4>
+          <a class="footer-link" href="https://github.com/marioloko" target="_blank" rel="noopener">
+            <img class="logo-icon" src="{{ get_url(path="images/github.svg") }}" alt="github-logo" title="Github"> Github
+          </a>
+          <a class="footer-link" href="https://www.linkedin.com/in/adrián-gallego-castellanos-383310103/" target="_blank" rel="noopener">
+            <img class="logo-icon" src="{{ get_url(path="images/linkedin.svg") }}" alt="linkedin-logo" title="LinkedIn"> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>  
+  </footer>
+
+  <script src="{{ get_url(path="js/bootstrap.bundle.min.js") }}" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+
+</html>

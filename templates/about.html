@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="section">
+<header>
+  <h1 class="title">
+    {{ section.title }}
+  </h1>
+  <div class="highlight mt-2 mb-3"><!-- Add a highlight under the title --></div>
+</header>
+<img class="about-img img-thumbnail pull-left mr-3" src="{{ get_url(path="images/Adrian_Gallego_Castellanos.jpeg") }}" alt="Adrian Gallego Castellanos screenshot">
+{{ section.content | safe }}
+</section>
+{% endblock content %}

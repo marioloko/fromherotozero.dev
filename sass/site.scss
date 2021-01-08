@@ -1,0 +1,189 @@
+$body-font: 'Fira Sans', Helvetica, Arial, sans-serif;
+$header-font: 'Alfa Slab One', serif;
+
+$black: #001B2E;
+$green: #21897E;
+$white: #FEFBF9;
+$mac-term: #042c3f;
+
+$nav-height: 10vh;
+$content-width: 800px;
+
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (min-width: 30em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: $body-font;
+  font-size: 1.5em;
+  background-color: $white;
+  margin: 0;
+}
+
+a {
+  color: $green;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($green, 10%);
+  }
+
+  &:visited {
+    color: $green;
+  }
+}
+
+header h1, section h2 {
+  z-index: 999999;
+  position: relative;
+}
+
+h1 {
+  font-family: $header-font;
+  font-size: 4em;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: $header-font;
+  font-size: 2em;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+h3 {
+  font-family: $header-font;
+  font-size: 1.4em;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+section {
+  padding: 30px 0 60px 0;
+}
+
+section .container {
+  padding-top: 20px;
+}
+
+ul.main-navbar, ul.main-navbar li {
+  margin-bottom: 0;
+}
+
+.post-item {
+
+  .post-date {
+    line-height: 1.0em;
+    color: rgba($black, 0.5);
+    font-size:0.9em;
+  }
+
+  & > .post-title a {
+    font-size: 1.5em;
+    color: $black;
+    text-decoration: none;
+    font-family: $header-font;
+
+    &:hover {
+      color: lighten($black, 10%);
+    }
+  }
+}
+
+.main-navbar {
+  background-color: $black;
+}
+
+.main-navbar .navbar-nav .nav-item .nav-link {
+  color: $green;
+}
+
+.main-navbar .navbar-nav .nav-item .nav-link:hover {
+  color: lighten($green, 10%);
+}
+
+.navbar-brand img {
+  max-width: 200px;
+}
+
+#main-content {
+  color: $black;
+  min-height: calc(100vh - #{$nav-height} - 1vh);
+  margin-bottom: 1vh;
+}
+
+#main-content .container {
+  max-width: $content-width;
+}
+
+#footer {
+  color: $green;
+  background-color: $black;
+}
+
+#footer .container {
+  max-width: $content-width;
+}
+
+#footer h4 {
+  font-family: $header-font;
+  color: $white;
+  font-size: 1.2em;
+}
+
+#footer .logo-icon {
+  height: 20px;
+}
+
+#footer .footer-link {
+  text-decoration: none;
+  color: $green;
+  display: block;
+
+  &:hover {
+    color: lighten($green, 10%);
+  }
+
+  &:visited {
+    color: $green;
+  }
+}
+
+pre {
+  padding: 10px;
+  border: 5px solid $mac-term;
+  background-color: darken($mac-term, 1%) !important;
+  border-radius: 5px;
+}
+
+/* Added bar under main title */
+.highlight {
+  background-color: $green;
+  height: 12px;
+  position: relative;
+  top: 0;
+  left: -10px;
+  width: 120%;
+  max-width: 90vw;
+  border-radius: 2px;
+}
+
+.about-img {
+  width: 200px;
+  float: left;
+  margin: 20px;
+}
+
+@media screen and (max-width: 769px) {
+  .highlight {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}

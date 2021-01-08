@@ -1,0 +1,23 @@
+# The title of the site
+title = "From Hero To Zero"
+
+# Description of the site
+description = "Adrian Gallego Castellanos blog. It focuses on learning new technologies."
+
+# The URL the site will be built for
+base_url = "https://fromherotozero.dev"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+highlight_theme = "nyx-bold"
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+[extra]
+# Put all your custom variables here
+author = "Adrián Gallego Castellanos"
